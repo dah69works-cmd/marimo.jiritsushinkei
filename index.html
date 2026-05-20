@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="40〜50代女性のための自律神経タイプ別セルフケア診断シート。体のサイン、感情の揺れ、生活負荷を5タイプで見える化します。"
+    />
+    <title>自律神経タイプ別セルフケア診断シート</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <img
+        class="hero__image"
+        src="assets/moss-character.jpg"
+        alt="やわらかな苔玉のような緑のキャラクター"
+        width="640"
+        height="640"
+        decoding="async"
+      />
+      <div class="hero__inner">
+        <p class="eyebrow">40〜50代女性のための</p>
+        <h1>自律神経タイプ別<br />セルフケア診断シート</h1>
+        <p class="subtitle">
+          家族にぶつけてしまう理由と、自己否定しやすいパターンを5タイプで見える化
+        </p>
+        <p class="lead">
+          体のサイン・感情の揺れ・生活負荷・家族への反応をやさしく整理するセルフチェックです。
+          今の自分に近い傾向を知って、今日から扱いやすくする小さな一歩を選びます。
+        </p>
+        <div class="hero__actions">
+          <button class="primary-button" type="button" data-start>診断をはじめる</button>
+          <a class="secondary-link" href="#notice">先に注意書きを読む</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="notice section" id="notice" aria-labelledby="notice-title">
+        <div class="section__inner">
+          <h2 id="notice-title">はじめに</h2>
+          <p>
+            この診断シートは、厚生労働省などの公的情報や、睡眠・ストレス・女性の健康に関する公開情報を参考に、
+            自分の状態を見える化するために作成しています。
+          </p>
+          <p>
+            医療的な診断や医療方針を示すものではありません。強い不調が続く場合や日常生活に支障がある場合は、
+            医療機関や専門家への相談も選択肢に入れてください。
+          </p>
+          <p>
+            名前・メールアドレス・電話番号などの入力は不要です。回答内容はこのページ内で計算され、外部には送信されません。
+          </p>
+        </div>
+      </section>
+
+      <section class="quiz section" id="quiz" aria-labelledby="quiz-title">
+        <div class="section__inner">
+          <div class="quiz__head">
+            <div>
+              <p class="eyebrow">20問セルフチェック</p>
+              <h2 id="quiz-title">今の状態に近いものを選んでください</h2>
+            </div>
+            <p class="quiz__count" aria-live="polite">
+              <span id="currentQuestion">1</span> / <span id="totalQuestions">20</span>
+            </p>
+          </div>
+
+          <div class="progress" aria-hidden="true">
+            <span id="progressBar"></span>
+          </div>
+
+          <form class="question-card" id="quizForm">
+            <fieldset>
+              <legend id="questionText"></legend>
+              <div class="choices" id="choices"></div>
+            </fieldset>
+            <p class="answer-message" id="answerMessage" role="status" aria-live="polite"></p>
+            <div class="quiz__actions">
+              <button class="ghost-button" type="button" id="prevButton">戻る</button>
+              <button class="primary-button" type="button" id="nextButton">次へ</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="result section section--hidden" id="result" aria-labelledby="result-title" tabindex="-1">
+        <div class="section__inner">
+          <p class="eyebrow">診断結果</p>
+          <h2 id="result-title">あなたに近いタイプ</h2>
+          <div class="result-summary" id="resultSummary"></div>
+          <div class="result-detail" id="resultDetail"></div>
+          <div class="score-board" id="scoreBoard" aria-label="各タイプのスコア"></div>
+          <div class="result__actions">
+            <button class="primary-button" type="button" id="copyButton">結果をコピーする</button>
+            <button class="ghost-button" type="button" id="restartButton">もう一度診断する</button>
+          </div>
+          <p class="copy-message" id="copyMessage" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="cta section" aria-labelledby="cta-title">
+        <div class="section__inner">
+          <h2 id="cta-title">日常の整え方を見にいく</h2>
+          <p>
+            診断結果を手元に残したら、オープンチャットで日常に取り入れやすい整え方を少しずつ見ていきましょう。
+          </p>
+          <div class="cta__actions">
+            <a
+              class="primary-button cta-link"
+              href="https://line.me/ti/g2/mp2SO9ZsIObVPVY8bhWWxsVJswvo3OeSg0b41g?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+            >
+              オープンチャットで日常の整え方を見る
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="references section" aria-labelledby="references-title">
+        <div class="section__inner">
+          <details>
+            <summary id="references-title">参考情報</summary>
+            <p>
+              このページの文言は、セルフチェックとして安全に扱える範囲に留めています。
+              出典URLは公開時に差し替えやすいよう、各リンクをまとめています。
+            </p>
+            <ul class="reference-list">
+              <li><a href="#">厚生労働省 e-ヘルスネット 休養・こころの健康</a></li>
+              <li><a href="#">厚生労働省 e-ヘルスネット 快眠と生活習慣</a></li>
+              <li><a href="#">厚生労働省 女性の健康推進室 更年期</a></li>
+              <li><a href="#">厚生労働省 女性の健康づくり</a></li>
+              <li><a href="#">PubMed Central掲載の睡眠・ストレス・自律神経に関するオープンアクセス文献</a></li>
+            </ul>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
